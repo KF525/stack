@@ -60,5 +60,18 @@ describe Stack do
     stack.pop
     stack.inspect.should == "# 3 55 >"
   end
-  
+
+  it "push should return the stack" do
+    stack = Stack.new
+    stack.push(10).push(4).push(55)
+    puts stack.inspect
+    stack.pop.should eq 55
+    stack.pop.should eq 4
+  end
+
+  it "has a read method that allows you to set the stack" do
+    stack = Stack.read("# 3 4 55 >")
+    stack.pop.should eq 55
+    stack.pop.should eq 4
+  end
 end
