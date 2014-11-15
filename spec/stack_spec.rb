@@ -26,4 +26,16 @@ describe Stack do
     stack.pop.should eq 3
     stack.pop.should eq nil
   end
+
+  it "popping on an empty stack doesn't break the stack" do
+    stack = Stack.new
+    stack.pop
+    stack.pop
+    stack.pop
+    stack.push(3)
+    stack.push(4)
+    stack.pop.should eq 4
+    stack.pop.should eq 3
+    stack.pop.should eq nil
+  end
 end

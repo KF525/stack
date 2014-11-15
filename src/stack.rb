@@ -6,13 +6,12 @@ class Stack
 
   def push(thing)
     @i += 1
-    @stack[@i] = thing #[nil, 3, 4]
+    @stack[@i] = thing
   end
 
   def pop
-    if @i != 0
+    if @i > -1
       popped = @stack[@i]
-      puts @stack.inspect
       @i -= 1
       popped
     else
