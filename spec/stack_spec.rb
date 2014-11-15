@@ -60,4 +60,5 @@ describe Stack do
     stack.pop
     stack.inspect.should == "# 3 55 >"
   end
+  
 end
